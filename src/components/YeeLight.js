@@ -10,26 +10,21 @@ const YeeLight = ({ id, entity_id, state }) => {
 	const handleToggleLight = useCallback(async () => {
 		if (!entity_id) return;
 		setLoading(true);
-		await callService("light", "toggle", { entity_id });
+		await callService('light', 'toggle', { entity_id });
 		setLoading(false);
 	}, [callService, entity_id]);
 
 	return (
 		<div
 			style={{
-				display: "flex",
+				display: 'flex',
 				padding: 10,
-				background: "rgba(255,255,255,0.15)",
-				borderRadius: "8px",
+				background: 'rgba(255,255,255,0.15)',
+				borderRadius: '8px',
 			}}
 		>
 			<div style={{ flexGrow: 1 }}>{id}</div>
-			<Switch
-				checked={state === "on"}
-				disabled={state === "offline"}
-				onClick={handleToggleLight}
-				loading={loading}
-			/>
+			<Switch checked={state === 'on'} disabled={state === 'offline'} onClick={handleToggleLight} loading={loading} />
 		</div>
 	);
 };

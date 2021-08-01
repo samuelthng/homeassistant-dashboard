@@ -1,4 +1,4 @@
-import { entity } from "simpler-state";
+import { entity } from 'simpler-state';
 const hass = entity(null);
 const showMenu = entity(null);
 const narrow = entity(null);

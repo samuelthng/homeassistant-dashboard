@@ -1,5 +1,5 @@
-import useHass from "@hooks/useHass";
+import useHass from '@hooks/useHass';
 export default function useHassUser() {
-  const { user } = useHass();
-  return user;
+	const { user } = useHass();
+	return user;
 }
