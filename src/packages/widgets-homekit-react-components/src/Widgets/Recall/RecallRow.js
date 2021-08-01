@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { CardContainer } from 'homekit-react-components';
+import {useEntity} from "simpler-state";
+import store from "@store";
 
 const RecallRowContainer = styled(CardContainer)`
   display: block;
@@ -19,9 +21,10 @@ const Description = styled.div`
 `;
 
 export function RecallRow(props) {
+  const hass = useEntity(store.hass);
   function handleDismiss() {
     if (props.entity) {
-      props.hass.callService('persistent_notification', 'dismiss', {
+      hass.callService('persistent_notification', 'dismiss', {
         notification_id: props.entity.entity_id.split('.')[1],
       });
     }

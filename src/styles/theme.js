@@ -48,7 +48,7 @@ export const theme = {
     },
     fan: {
       colorActive: colors.fanActive,
-      colorActive: colors.textMedium,
+      colorInactive: colors.textMedium,
     }
   },
   cameraCard: {

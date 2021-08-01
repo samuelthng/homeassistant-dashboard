@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { CardContainer } from 'homekit-react-components';
 import { RecallRow } from './RecallRow';
 import { CardTitle } from '../CardTitle';
+import {useEntity} from "simpler-state";
+import store from "@store";
 
 const RecallCardContainer = styled(CardContainer)`
   width: 100%;
@@ -26,7 +28,8 @@ const BadgeCount = styled.div`
 `;
 
 export function RecallCard(props) {
-  const notifications = Object.keys(props.hass.states).filter(key => key.includes('persistent_notification'));
+    const hass = useEntity(store.hass);
+  const notifications = hass ? Object.keys(hass.states).filter(key => key.includes('persistent_notification')) : [];
 
   return (
     <RecallCardContainer>
@@ -36,7 +39,7 @@ export function RecallCard(props) {
       }
       {notifications.length ?
         notifications.map((key) => 
-          <RecallRow key={key} hass={props.hass} entity={props.hass.states[key]} />
+          <RecallRow key={key} hass={hass} entity={hass.states[key]} />
         ) :
         <RecallRow inactive message={'Aucun rappel'} />
       }
