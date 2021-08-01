@@ -1,4 +1,4 @@
-# HomeAssistant React Dashboard
+# HomeAssistant React App
 
 ## Motivation
 
