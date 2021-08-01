@@ -8,9 +8,9 @@ Credits go to william57m for the original idea, his motivation can be found belo
 I loved the idea of using React as a web component and wanted to improve on how it is mounted and how the Home Assistant props are being passed to the application.
 
 The main goal of this fork is to optimise mounting the React app as a web component and minimise re-renders.
-Design wise, do not expect much and I've got 0 creative skills. I will definitely not stick to william57m's design choices down the road.
+Design wise, do not expect much because I've got 0 creative skills. I will definitely not stick to william57m's design choices down the road.
 
-Finally, this is a pet project and may die anytime. Please only use at as a reference.
+Finally, this is a pet project and may die anytime. Please only use as a reference - at your own risk.
 
 ## Motivation
 
