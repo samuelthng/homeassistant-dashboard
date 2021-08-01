@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThermostatCard } from 'homekit-react-components';
 
 export function HassThermostatCard(props) {
@@ -21,7 +20,7 @@ export function HassThermostatCard(props) {
 	}
 
 	return (
-		<React.Fragment>
+		<>
 			<ThermostatCard
 				name={friendly_name}
 				currentMode={isActive ? 'Heat' : 'Off'}
@@ -30,6 +29,6 @@ export function HassThermostatCard(props) {
 				onModeChange={handleModeChange}
 				onTemperatureChange={handleTemperatureChange}
 			/>
-		</React.Fragment>
+		</>
 	);
 }

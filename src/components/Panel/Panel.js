@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled from '@emotion/styled';
 import { AlarmCard, DateView, RecallCard, TimeView, WeatherCard } from '@packages/widgets-homekit-react-components/src';
 import { PanelSection } from '@packages/widgets-homekit-react-components/src';

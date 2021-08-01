@@ -1,5 +1,5 @@
 import { get, isEqual } from 'lodash';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { PanelSection } from '@packages/widgets-homekit-react-components/src';
 import YeeLight from '@components/YeeLight';

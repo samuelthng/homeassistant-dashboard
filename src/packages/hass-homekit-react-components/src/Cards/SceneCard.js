@@ -1,4 +1,3 @@
-import React from 'react';
 import { SceneCard } from 'homekit-react-components';
 
 export function HassSceneCard(props) {

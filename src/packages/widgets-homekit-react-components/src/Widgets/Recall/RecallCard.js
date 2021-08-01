@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { CardContainer } from 'homekit-react-components';
 import { RecallRow } from './RecallRow';
