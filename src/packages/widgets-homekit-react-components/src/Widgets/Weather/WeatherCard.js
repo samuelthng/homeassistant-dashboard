@@ -1,5 +1,5 @@
 import regeneratorRuntime from 'regenerator-runtime';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { CardContainer } from 'homekit-react-components';
 import { WeatherRow } from './WeatherRow';

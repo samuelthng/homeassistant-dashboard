@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldAlt, faLock, faMoon } from '@fortawesome/free-solid-svg-icons';
@@ -93,7 +93,7 @@ export function AlarmCard(props) {
 				<Title>Alarme</Title>
 				<ButtonsContainer>
 					{state === 'disarmed' ? (
-						<React.Fragment>
+						<>
 							<SceneCard
 								icon={<FontAwesomeIcon icon={faShieldAlt} />}
 								name="Armer absent"
@@ -111,7 +111,7 @@ export function AlarmCard(props) {
 								width="49%"
 								isActive={false}
 							/>
-						</React.Fragment>
+						</>
 					) : (
 						<SceneCard
 							icon={<FontAwesomeIcon icon={faShieldAlt} />}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { LightCard } from 'homekit-react-components';
 import useHassState from '@hooks/useHassState';
 
