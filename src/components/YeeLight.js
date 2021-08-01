@@ -3,7 +3,6 @@ import useCallService from '@hooks/useCallService';
 import { Switch } from 'antd';
 
 const YeeLight = ({ id, entity_id, state }) => {
-	console.log(`${id} rendered`);
 	const [loading, setLoading] = useState(false);
 	const callService = useCallService();
 

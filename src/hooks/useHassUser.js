@@ -1,5 +1,5 @@
 import useHass from '@hooks/useHass';
+import { isEqual } from 'lodash';
 export default function useHassUser() {
-	const { user } = useHass();
-	return user;
+	return useHass(({ user }) => user, isEqual);
 }

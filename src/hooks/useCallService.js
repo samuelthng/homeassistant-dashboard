@@ -1,7 +1,7 @@
-import store from '@store';
+import useHass from '@hooks/useHass';
 
 export default function useCallService() {
-	const { callService } = store.hass.use(
+	const { callService } = useHass(
 		({ callService }) => ({ callService }),
 		() => true
 	);

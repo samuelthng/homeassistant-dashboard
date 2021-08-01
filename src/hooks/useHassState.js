@@ -1,7 +1,6 @@
-import { get } from 'lodash';
+import { isEqual } from 'lodash';
 import useHass from '@hooks/useHass';
-
 export default function useHassState(entityName, defaultValue = undefined) {
-	const hass = useHass();
-	return get(hass, ['states', entityName], defaultValue);
+	const entity = useHass(({ states }) => states[entityName], isEqual);
+	return entity || defaultValue;
 }

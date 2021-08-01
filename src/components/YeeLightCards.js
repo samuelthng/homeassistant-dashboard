@@ -1,9 +1,9 @@
 import { get, isEqual } from 'lodash';
-import store from '@store';
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { PanelSection } from '@packages/widgets-homekit-react-components/src';
 import YeeLight from '@components/YeeLight';
+import useHass from '@hooks/useHass';
 
 const AutoFlowContainer = styled(PanelSection)`
 	margin-top: 0;
@@ -39,7 +39,7 @@ const lightReducer = (acc, state) => {
 };
 
 const YeeLightCards = () => {
-	const lights = store.hass.use(({ states }) => {
+	const lights = useHass(({ states }) => {
 		const lightsMap = Object.values(states)
 			.filter(state => state.entity_id.includes('yeelight'))
 			.reduce(lightReducer, {});
