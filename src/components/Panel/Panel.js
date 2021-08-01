@@ -24,7 +24,6 @@ const alarmSensors = [
 ];
 
 export function Panel() {
-	console.log('panel rendered');
 	return (
 		<ErrorBoundary>
 			<PanelContainer>
